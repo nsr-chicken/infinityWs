@@ -1,0 +1,16 @@
+{
+  "name": "infinity-ws",
+  "version": "1.0.0",
+  "description": "Infinity WS packages",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Anvesh Balaji",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "firebase": "^5.5.7"
+  }
+}
