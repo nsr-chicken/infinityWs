@@ -1,0 +1,12 @@
+node_modules/
+package-lock.json
+dist/
+public/uploads/
+.env
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+email-templates/dist
