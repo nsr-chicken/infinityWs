@@ -2,7 +2,8 @@ const USER_TYPE = {
     ADMIN: 'admin',
     TEACHER: 'teacher',
     STUDENT: 'student',
-    PARENT: 'parent'
+    PARENT: 'parent',
+    SUPPER_ADMIN: 'supper admin'
 }
 
 

@@ -58,6 +58,10 @@ const coursesSchema = new Schema({
         type: String,
         enum: [constants.COURSES_TYPE.SCHOOL, constants.COURSES_TYPE.COLLEGE],
     },
+    status:{
+        type: String,
+        enum: ['active', 'inactive', 'delete'],
+    }
 });
 
 const Course = mongoose.model("course", coursesSchema);

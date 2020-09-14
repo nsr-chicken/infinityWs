@@ -15,8 +15,14 @@ function authenticate(req, res, next) {
 
                 });
             } else {
+                console.log(decoded.id,'decoded.id---------')
+                console.log(decoded.userName,'decoded.id---------')
+                console.log(decoded.userType,'decoded.id---------')
+                         console.log(decoded.academyId,'decoded.academyId---------')
                 req.userId = decoded.id;
-                req.userType = decoded.type;
+                req.userName = decoded.userName;
+                req.userType = decoded.userType;
+                req.academyId = decoded.academyId;
                 next();
             }
         });

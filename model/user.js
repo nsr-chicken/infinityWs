@@ -19,7 +19,8 @@ const UserSchema = new Schema({
   },
   userType: {
     type: String,
-    enum: [constants.USER_TYPE.ADMIN, constants.USER_TYPE.TEACHER, constants.USER_TYPE.PARENT, constants.USER_TYPE.STUDENT],
+    required: true,
+    enum: [constants.USER_TYPE.SUPPER_ADMIN, constants.USER_TYPE.ADMIN, constants.USER_TYPE.TEACHER, constants.USER_TYPE.PARENT, constants.USER_TYPE.STUDENT],
   },
   phoneNumber: {
     type: Number,
@@ -54,6 +55,16 @@ const UserSchema = new Schema({
       type: String,
     },
   },
+  createdBy: {
+    userName: {
+      type: String,
+      // required: true
+    },
+    userId: {
+      type: String,
+      // required: true
+    },
+  },
   geoLocation: {
     type: {
       type: String,
@@ -62,6 +73,10 @@ const UserSchema = new Schema({
     },
     coordinates: [Number],
   },
+  status:{
+    type: String,
+    enum: ['active', 'inactive', 'delete'],
+}
 });
 
 const User = mongoose.model('user', UserSchema);

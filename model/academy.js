@@ -7,6 +7,10 @@ const academySchema = new Schema({
         type: String,
         required: true
     },
+    directorName:{
+        type: String,
+        required: true
+    },
     email: {
         type: String,
         required: true,
@@ -20,28 +24,21 @@ const academySchema = new Schema({
     address: {
         doorNumber: {
             type: String,
-            required: true,
         },
         street: {
             type: String,
-            required: true,
         },
-
         country: {
             type: String,
-            required: true,
         },
         state: {
             type: String,
-            required: true,
         },
         city: {
             type: String,
-            required: true,
         },
         pincode: {
             type: String,
-            required: true,
         },
         landmark: {
             type: String,
@@ -49,6 +46,14 @@ const academySchema = new Schema({
     },
     totalCourseCount: {
         type: Number
+    },
+    status:{
+        type: String,
+        enum: ['active', 'inactive', 'delete'],
     }
 
 });
+
+const Academy = mongoose.model("academy", academySchema);
+
+module.exports = { Academy };
