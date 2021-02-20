@@ -19,7 +19,7 @@ router.post('/register',[authenticate], validator.body(SignupValidation),async (
     if (gADRes) {
       res.json(gADRes);
     } else {
-      res.status(500).json({ gADErr });
+      res.status(500).json(gADErr);
     }
   });
 });
@@ -34,7 +34,7 @@ router.post("/signin", validator.body(signInValidation), async (req, res) => {
     if (gADRes) {
       res.json(gADRes);
     } else {
-      res.status(500).json({ gADErr });
+      res.status(500).json(gADErr);
     }
   });
 
